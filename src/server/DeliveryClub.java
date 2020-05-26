@@ -22,7 +22,7 @@ public class DeliveryClub implements HttpHandler {
 	   	Headers headers = httpExchange.getResponseHeaders();
 	   	File src = new File (str);
 	   	String type = str.substring(str.lastIndexOf("."), str.length());
-	   	byte[] response = Pathfinder.pathfinder(type, src); 
+	   	byte[] response = Pathfinder.pathfinder( src); 
 	   	Responder.resp(200, response, outputStream, httpExchange);
 	   	if (Heads.hd(type).isEmpty()) {
 	   		System.out.println("Type is not supported");

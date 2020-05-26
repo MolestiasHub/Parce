@@ -30,7 +30,7 @@ public class MyHttp implements HttpHandler{
 		   	headers.set("Content-Type", "text/html; charset=utf-8");
 		   	File hui = new File ("src/public/hey.html");
 
-		   	byte [] response = Pathfinder.pathfinder(".html", hui);
+		   	byte [] response = Pathfinder.pathfinder(hui);
 		   	
 		    str = str ++;
 		   	System.out.println("Req num:" + str);
