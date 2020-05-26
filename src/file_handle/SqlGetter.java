@@ -1,4 +1,4 @@
-package server;
+package file_handle;
 
 import java.sql.*;
 
@@ -9,7 +9,7 @@ public class SqlGetter {
 				Class.forName("com.mysql.cj.jdbc.Driver");
 			
 			Connection con=DriverManager.getConnection(  
-					"jdbc:mysql://localhost:3306/base","root","Molly1888");   
+					"jdbc:mysql://localhost:3306/base","login","pass");   
 			Statement stmt = con.createStatement();  
 			ResultSet rs=stmt.executeQuery("select COUNT(*) from sources;") ;
 			rs.next();

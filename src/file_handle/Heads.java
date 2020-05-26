@@ -1,4 +1,4 @@
-package server;
+package file_handle;
 
 import java.util.HashMap;
 
@@ -10,6 +10,9 @@ public class Heads {
 		mine.put(".html", "text/html; charset=utf-8");
 		mine.put(".jpg", "image/jpg; charset=utf-8");
 		mine.put(".gif", "image/gif; charset=utf-8");
+		if(mine.get(type).isEmpty()) {
+			System.out.println("No such type");
+		}
 		return mine.get(type);
 	}
 }
